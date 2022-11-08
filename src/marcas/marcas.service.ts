@@ -15,4 +15,8 @@ export class MarcasService {
         id: 3,
         name: 'Chevrolet'
     }]
-    }}
+    }
+    postMarcas() {
+        return "Marca Creada"
+    }
+}

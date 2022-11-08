@@ -1,13 +1,17 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 import { get } from 'http';
 import { MarcasService } from './marcas.service';
 
-@Controller('marcas')
+@Controller('api/edi')
 export class MarcasController {
     constructor(private readonly marcasService: MarcasService) {}
 
     @Get()
-    getProducts() {
+    getMarcas() {
         return this.marcasService.getMarcas();
+    }
+    @Post()
+    postMarcas(){
+        return this.marcasService.postMarcas();
     }
 }
